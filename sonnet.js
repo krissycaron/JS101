@@ -39,15 +39,51 @@ var numberFive = parseInt(five);
 // element.innerHTML = "<b>hello</b>"
 
 
+
+// Take the contents of the sonnet div and place it in a variable
+
 var element = document.getElementById("sonnet")
 
+
+// Take the contents of the sonnet div and place it in a variable
 var sonnet =element.innerHTML;
 
-//.innerHTML only grabs the text in the html div 
+//.innerHTML only grabs the text in the html div not the actual div tags
 
-console.log(sonnet);
+console.log("starting sonnet text", sonnet);
 
-console.log ("length: ", sonnet.length);
+
+// Find and output the starting position of the word "orphans"
+
+var indexOfOrphans = sonnet.indexOf ("orphans");
+
+console.log ("indexOfOrphans", indexOfOrphans);
+
+
+// Output the number of characters in the sonnet
+
+
+console.log ("length of sonnet ", sonnet.length);
+
+// Replace the first occurance of the string "winter" with "yuletide"
+
+
+var element = document.getElementById("sonnet");
+console.log(document);
+
+var newSonnet = sonnet.replace("winter", "yuletide")
+console.log("yuletide", newSonnet)
+
+// Replace all occurances of the string "the" with "a large"
+
+var globalReplace = newSonnet.replace(/the/g, "a large");
+console.log("final sonnet", globalReplace)
+
+
+// Set the content of the sonnet div with the new string
+//this is the opposite of puling into the js from html
+
+element.innerHTML = globalReplace;
 
 
 
